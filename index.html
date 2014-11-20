@@ -4,9 +4,13 @@
   <head>
     <style>
       body {
-      	margin: 50px 0px;
+      	margin: 15px 0px;
         padding: 0px;
       	text-align: center;
+        background: rgb(123, 167, 212);
+      }
+      img.logo {
+        margin: 15px auto;
       }
       canvas {
         background-image: url("assets/space.jpg");
@@ -16,7 +20,9 @@
   </head>
 
   <body>
-  <label for="game-canvas">ASTEROIDS</label><br>
+
+  <img class="logo" src="assets/space-dog-logo.png"></img>
+  <label for="game-canvas"></label><br>
     <canvas id="game-canvas"></canvas>
 
     <script src="lib/keymaster.js"></script>
@@ -30,8 +36,8 @@
 
     <script>
       var canvasEl = document.getElementById("game-canvas");
-      canvasEl.height = 350;
-      canvasEl.width = 625;
+      canvasEl.height = 600;
+      canvasEl.width = 600;
       var ctx = canvasEl.getContext("2d");
       var game = new Asteroids.Game();
       var gameView = new Asteroids.GameView(game, ctx);
